@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Activos_Fijos_Apis.Models;
+using System.Web.Http.Cors;
 
 namespace Activos_Fijos_Apis.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class PROVEEDORESController : ApiController
     {
         private Model1 db = new Model1();

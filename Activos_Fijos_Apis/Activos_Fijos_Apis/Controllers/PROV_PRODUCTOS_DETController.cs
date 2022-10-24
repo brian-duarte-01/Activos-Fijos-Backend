@@ -8,11 +8,14 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using Activos_Fijos_Apis.Models;
+using System.Web.Http.Cors;
 
 namespace Activos_Fijos_Apis.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class PROV_PRODUCTOS_DETController : ApiController
     {
         private Model1 db = new Model1();
